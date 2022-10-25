@@ -14,7 +14,7 @@ app.use(bodyparser.json())
 
 //Conexion a base de datos 
 console.log(process.env)
-const uri = `mongodb+srv://${process.env.USUARIO}:${process.env.PASSWORD}@cluster0.osgbod5.mongodb.net/${process.env.DBNAME}?retryWrites=true&w=majority`
+const uri = `mongodb+srv://NotoriusOkay:NotoriusOkay@cluster0.osgbod5.mongodb.net/${process.env.DBNAME}?retryWrites=true&w=majority`
 mongoose.connect(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -39,7 +39,7 @@ app.get('/', (req, res) => {
 
 //Inicializar servidor 
 
-const PORT = process.env.PORT || 3001
+const PORT = process.env.PORT || 3002
 app.listen(PORT, () =>{
     console.log(`Servidor Corriendo: ${PORT}`)
 })
