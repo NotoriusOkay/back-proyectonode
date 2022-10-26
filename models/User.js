@@ -30,6 +30,12 @@ const userSchema = mongoose.Schema({
         type: String,
         required: true,
         minlenght: 6
+    },
+    username: {
+        type: String,
+        required: true,
+        min: 6,
+        max: 255
     }
 })
 
